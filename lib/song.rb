@@ -11,25 +11,15 @@ class Song
   
   
   def initialize(name, artist, genre)
-    @@genre = genre
-    @@artist = artist
-    @@name = name
+    @genre = genre
+    @artist = artist
+    @name = name
     @@count += 1
     @@genres << genre
     @@artists << artist
   end
   
-  def name
-    @@name
-  end
-  
-  def artist
-    @@artist
-  end
-  
-  def genre
-    @@genre
-  end
+
   
   def genres
     @@genres.uniq!
@@ -53,11 +43,10 @@ class Song
     
   
   def self.genre_count
-    self.genres.each do |genres, count| 
-      if !@@genre_count[genres].eql? genres
-binding.pry      
-        @@genre_count[genres] = genres
-        @@genre_count[genres] << 1
+    @@genres.each do |genres| 
+# binding.pry      
+      if !@@genre_count[genres] 
+        @@genre_count[genres] = 1
       else
         @@genre_count[genres] += 1 
       end
@@ -71,7 +60,7 @@ binding.pry
 
           # if @@genre_count[:genres] != genres
       #   @@genre_count[genres] = genres
-      #   @@genre_count[genres] = [count]
+        # @@genre_count[genres] = [count]
       #   @@genre_count[:genres] = [count += 1]
       # else
       #   @@genre_count[:genres] = [count += 1]
