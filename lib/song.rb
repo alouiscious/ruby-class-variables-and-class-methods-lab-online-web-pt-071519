@@ -54,17 +54,7 @@ class Song
         @@genre_count
 
         
-      # @@genre_count = genres
-      # @@genre_count[genres] = @@count
-    # end
 
-          # if @@genre_count[:genres] != genres
-      #   @@genre_count[genres] = genres
-        # @@genre_count[genres] = [count]
-      #   @@genre_count[:genres] = [count += 1]
-      # else
-      #   @@genre_count[:genres] = [count += 1]
-      # end
       
   end
   
